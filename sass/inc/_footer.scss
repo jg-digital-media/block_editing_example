@@ -1,0 +1,21 @@
+
+footer {
+
+    /* background: gray; */
+
+    color: $col_primary;
+    text-align: center;
+
+    p {
+
+        a {
+
+            color: $link_secondary;
+
+            &:hover {
+
+                color: $link_main_hover;
+            }
+        }
+    }
+}

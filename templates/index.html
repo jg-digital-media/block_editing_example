@@ -1,0 +1,87 @@
+<!-- wp:template-part {"slug":"header"} /-->
+
+
+
+    <main id="container">    
+
+        <p> index.html - templates directory </p>
+
+        <h2>Content Subtitle - </h2>
+
+        <section id="content">
+
+            <aside class="secondary_content">
+
+                <h3>Aside Subtitle</h3>
+
+            </aside>
+
+
+            <section class="primary_content">
+
+                <h3>Section Subtitle</h3>
+
+                <p>Primary content goes here! Below is a list of the posts currently available on this site.</p>
+                
+                <!-- wp:group {"layout":{"inherit":false}} -->
+                <div class="wp-block-group">
+
+                    <!-- wp:query -->
+                        <div class="wp-block-query">
+                            <!-- wp:post-template -->
+                            <!-- wp:post-title /-->
+                            <!-- wp:post-date /-->
+                            <!-- wp:post-excerpt /-->
+                            <!-- wp:post-content /-->
+                            <!-- wp:post-author /-->
+                            <!-- /wp:post-template -->
+                        
+                            <!-- wp:query-pagination -->
+                            <div class="wp-block-query-pagination">
+                                <!-- wp:query-pagination-previous /-->
+                                <!-- wp:query-pagination-numbers /-->
+                                <!-- wp:query-pagination-next /-->
+                            </div>
+                            <!-- /wp:query-pagination -->
+                        </div>
+
+                    <!-- /wp:query -->                        
+
+                </div>
+                <!-- /wp:block -->
+
+
+
+            </section>
+
+        </section>
+
+        <section class="widget_areas">
+
+            <div class="widget_area_one">
+
+                <h3>Widget Area </h3>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="widget_area_two">
+
+                <h3>Widget Area </h3>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="widget_area_three">
+
+                <h3>Widget Area </h3>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+ 
+<!-- wp:template-part {"slug":"footer"} /-->

@@ -1,0 +1,87 @@
+main {
+
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+
+    h2 {
+
+        text-align: center;
+        color: white;
+    }
+
+    p {
+
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #content {
+
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 auto;
+        gap: 3px;
+        width: 90%;
+
+    }
+
+    .primary_content,
+    .secondary_content {
+
+        border: solid red 1px;
+
+        p {
+
+            text-align: left;
+        }
+
+        h3 {
+
+            color: white;
+        }
+
+    }
+
+    
+    .primary_content {
+
+        width: 71%;
+    }
+
+    .secondary_content {
+
+        width: 29%;
+
+    }
+
+    .widget_areas {
+
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+        display: flex;
+
+        .widget_area_one,
+        .widget_area_two,
+        .widget_area_three {
+
+            border: solid red 1px;
+            width: 35%;
+
+            h3 {
+
+                text-align: center;
+                color: white;
+            }
+
+            p {
+
+                line-height: 2;
+                color: white;
+            }
+        }
+    }
+
+}

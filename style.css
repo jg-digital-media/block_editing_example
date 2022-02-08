@@ -1,0 +1,99 @@
+/*
+Theme Name: JGDM - Block Editing for WordPress
+Theme URI: https://github.com/WordPress/theme-experiments/tree/master/tt1-blocks
+Author: @jg_digitalMedia
+Author URI: https://www.jonniegrieve.co.uk
+Description: Block Editing Example for WP Core 5.9
+Tested up to: 5.9
+Requires PHP: 5.9
+Version: 0.4.5
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: block_editing_example
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+
+
+*/
+/* Last Update: 08-02-2022 - 14:39 */
+/*Styles*/
+body {
+  background: #65b7ff; }
+
+header {
+  background: #070c41;
+  border-bottom: 3px white solid; }
+  header img#main_logo {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    /* bottom: 30px; */
+    bottom: 50px; }
+  header h1 {
+    text-align: center;
+    color: white; }
+    header h1 span {
+      color: orange;
+      font-size: 12px; }
+
+main {
+  display: block;
+  margin: 0 auto;
+  width: 100%; }
+  main h2 {
+    text-align: center;
+    color: white; }
+  main p {
+    color: white;
+    text-align: center;
+    margin-top: 10px; }
+  main #content {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    gap: 3px;
+    width: 90%; }
+  main .primary_content,
+  main .secondary_content {
+    border: solid red 1px; }
+    main .primary_content p,
+    main .secondary_content p {
+      text-align: left; }
+    main .primary_content h3,
+    main .secondary_content h3 {
+      color: white; }
+  main .primary_content {
+    width: 71%; }
+  main .secondary_content {
+    width: 29%; }
+  main .widget_areas {
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+    display: flex; }
+    main .widget_areas .widget_area_one,
+    main .widget_areas .widget_area_two,
+    main .widget_areas .widget_area_three {
+      border: solid red 1px;
+      width: 35%; }
+      main .widget_areas .widget_area_one h3,
+      main .widget_areas .widget_area_two h3,
+      main .widget_areas .widget_area_three h3 {
+        text-align: center;
+        color: white; }
+      main .widget_areas .widget_area_one p,
+      main .widget_areas .widget_area_two p,
+      main .widget_areas .widget_area_three p {
+        line-height: 2;
+        color: white; }
+
+footer {
+  /* background: gray; */
+  color: white;
+  text-align: center; }
+  footer p a {
+    color: red; }
+    footer p a:hover {
+      color: #eaf37f; }
+
+/*# sourceMappingURL=style.css.map */

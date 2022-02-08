@@ -1,0 +1,28 @@
+
+/*Styles*/
+
+%background_styling {
+    background: url(img/interior-darker.jpg);
+    background-size: cover !important;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+%content_bg {
+    line-height: 1.9;
+    /* width: 90%; */
+    /* width: 42%; */
+   /*  width: 100%; */
+    width: 90%;
+    margin-bottom: 15pt;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    background: #ffffff55;
+    border: solid white 3px;
+
+    @media (max-width: $breakpoint-lg) {
+        margin: 15px;
+    }
+}

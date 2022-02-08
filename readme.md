@@ -9,7 +9,7 @@
 
 Add the `block_editing_example` directory and its contents to your WordPress installation inside `wp-content/themes` directory.
 
-You can clone the files into that directory with the following command - **insert command here**
+You can clone the files into that directory with the following command - `git clone https://github.com/jg-digital-media/block_editing_example`
 
 + There are two files that are required to activate any theme: These are `index.php` and `style.css`.
 

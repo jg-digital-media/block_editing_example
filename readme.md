@@ -1,25 +1,37 @@
-# Basic Block Theme Developing for WordPress (5.9+)
+# Basic Block Theme Developing for WordPress (5.9+)  
+**Updated:**  09/02/2022 - 16:09  v2
 
 ## Source Link
 
 + [Basic Block Theme Development - WordPress Docs](https://developer.wordpress.org/block-editor/how-to-guides/themes/create-block-theme/#what-is-needed-to-create-a-block-theme)
 
 
-## Theme Setup.
+## Theme Setup Instructions.
 
 Add the `block_editing_example` directory and its contents to your WordPress installation inside `wp-content/themes` directory.
 
 You can clone the files into that directory with the following command - `git clone https://github.com/jg-digital-media/block_editing_example`
 
-+ There are two files that are required to activate any theme: These are `index.php` and `style.css`.
-
-## Instructions
 
 ```
 index.php
 style.css
-
+templates(d) -> index.html
 ```
+
+The `index.php` should remain blank but remain in your theme files as a fallback file. 
+
+These files are set up with full site block editing for WordPres in mind
+
+  + Edit the template files to change the markup in the `templates` directory
+
+  + define template parts (such as a header and/or footer template) in the `parts` directory.
+
+  + Edit the `style.css` file to edit the theme styles as you desire.  If you are using the SASS pre compiler with the `sass --watch` command you can use `style.scss` which imports the sass partials from the `sass` directory.
+
+  + There are two files that are required to activate any theme: These are `index.php` and `style.css`.
+
+
 
 For Templates, you should use HTML files in a `templates` folder.  For added efficiency and oranisation you can further split templates into parts and put them `parts` folder. A Block Editing theme must also include an `index.html` template inside the `templates` directory.
 

@@ -6,6 +6,9 @@
 
         <h2>Content Subtitle - </h2>
 
+
+        
+
         <section id="content">
 
             <aside class="secondary_content">
@@ -20,6 +23,38 @@
                 <h3>Section Subtitle</h3>
 
                 <p>Primary content goes here! Below is a list of the posts currently available on this site.</p>
+
+                <!-- <display list of posts> -->
+
+                <!-- wp:group {"layout":{"inherit":false}} -->
+                <div class="wp-block-group">
+
+                    <!-- wp:query -->
+                        <div class="wp-block-query">
+
+                            <!-- wp:post-template -->
+
+                                    <!-- wp:post-title /-->
+                                    <!-- wp:post-date /-->
+                                    <!-- wp:post-excerpt /-->
+                                    <!-- wp:post-content /-->
+                                    <!-- wp:post-author /-->
+
+                            <!-- /wp:post-template -->
+                        
+                            <!-- wp:query-pagination -->
+                            <div class="wp-block-query-pagination">
+                                <!-- wp:query-pagination-previous /-->
+                                <!-- wp:query-pagination-numbers /-->
+                                <!-- wp:query-pagination-next /-->
+                            </div>
+                            <!-- /wp:query-pagination -->
+                        </div>
+
+                    <!-- /wp:query -->                        
+
+                </div>
+                <!-- /wp:block -->
 
             </section>
 

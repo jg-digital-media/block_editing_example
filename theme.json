@@ -11,27 +11,98 @@
             "palette": [
                 {
 
-                    "slug":"",
-                    "color":"",
-                    "name":""
+                    "slug":"light_blue",
+                    "color":"#65b7ff",
+                    "name":"jgdm-customised-blue-theme"
                 }, {
 
-                    "slug":"",
-                    "color":"",
-                    "name":""
+                    "slug":"green_theme",
+                    "color":"#a1c36b",
+                    "name":"jgdm-customised-green-theme"
 
                 }
             ]
-        },
+        }, "blocks": { 
+
+            "core/heading": {
+
+                "color": {
+            
+                    "palette": [
+
+                        {
+
+                            "slug": "jgdm-heading-white",
+                            "color": "white",
+                            "name": "White"
+                        }, {
+
+                            "slug": "jgdm-heading-medium-blue",
+                            "color": "#00A0D2",
+                            "name": "Medium blue"
+                        }
+
+
+                    ]
+                }
+            }, 
+
+            "core/paragraph": {
+                
+                "color": {
+            
+                    "palette": [
+
+                        {
+
+                            "slug": "jgdm-para-yellow",
+                            "color": "yellow",
+                            "name": "Colour Yellow"
+                        }, {
+
+                            "slug": "jgdm-para-medium-green",
+                            "color": "green",
+                            "name": "Colour Green"
+                        }
+
+
+                    ]
+                }
+
+            }, 
+
+            "core/links": {
+                
+                "color": {
+            
+                    "palette": [
+
+                        {
+
+                            "slug": "jgdm-para-blue",
+                            "color": "Blue",
+                            "name": "Link Colour Blue"
+                        }
+
+                    ]
+                    
+                }
+
+
+            }
+            
+        },   
+
+        
 
         "typography": {
 
             
             "fontSizes": [
                 {
-                    "slug": "",
-                    "size": "",
-                    "name": ""
+                    "slug": "font-medium",
+                    "size": "16px",
+                    "name": "font-16"
                 },
                 {
                     "slug": "",
@@ -54,16 +125,8 @@
 
     "styles": {
 
-        "blocks": { 
-            
-            "core/paragraph": {
-
-                "color": {
-
-                    "text": "red"
-
-
-                }, 
+        "blocks": {            
+          
 
                 "custom": {
 
@@ -71,6 +134,8 @@
 
                 "layout": {
 
+                    "contentSize": "840px",
+                    "wideSize": "1200px"
                 }, 
 
                 "spacing": {
@@ -81,10 +146,11 @@
 
                 }
 
-            }
-        
+            }        
 
-        }
+
+
+
     },
 
     "templateParts": [

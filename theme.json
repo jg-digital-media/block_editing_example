@@ -1,6 +1,125 @@
 {
-    "version": 2,
-    "settings": {},
-    "styles": {},
-    "templateParts": []
+
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+
+    "version": "2",
+
+    "settings": {
+
+        "color": {
+            
+            "palette": [
+                {
+
+                    "slug":"",
+                    "color":"",
+                    "name":""
+                }, {
+
+                    "slug":"",
+                    "color":"",
+                    "name":""
+
+                }
+            ]
+        },
+
+        "typography": {
+
+            
+            "fontSizes": [
+                {
+                    "slug": "",
+                    "size": "",
+                    "name": ""
+                },
+                {
+                    "slug": "",
+                    "size": "",
+                    "name": ""
+                },
+                {
+                    "slug": "",
+                    "size": "",
+                    "name": ""
+                }
+            ]
+        },
+
+        "layout": {
+
+        }
+
+    }, 
+
+    "styles": {
+
+        "blocks": { 
+            
+            "core/paragraph": {
+
+                "color": {
+
+                    "text": "red"
+
+
+                }, 
+
+                "custom": {
+
+                }, 
+
+                "layout": {
+
+                }, 
+
+                "spacing": {
+
+                },
+
+                "typography": {
+
+                }
+
+            }
+        
+
+        }
+    },
+
+    "templateParts": [
+
+        {
+            "name": "header",
+            "area": "header",
+            "title": "Template Part Header"
+        }, {
+            "name": "footer",
+            "area": "footer",
+            "title": "Template Part Footer"
+        }, {
+            "name": "general",
+            "area": "general",
+            "title": "Template Part General"
+        }
+    ],
+
+    "customTemplates": [
+
+        {
+
+            "name": "page-home",
+            "title": "Page Title"
+        }, {
+
+            "name": "page-contact",
+            "title": "Contact",
+            "postTypes": [
+
+                "page"
+            ]
+        }
+
+    ]
+
 }

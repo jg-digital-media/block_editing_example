@@ -1,10 +1,14 @@
 # Basic Block Theme Developing for WordPress (5.9+)  
-**Updated:**  09/02/2022 - 16:09  v2
+**Updated:**  10/02/2022 - 14:39  v3
 
-## Source Link
+## Source Links
 
-+ [Basic Block Theme Development - WordPress Docs](https://developer.wordpress.org/block-editor/how-to-guides/themes/create-block-theme/#what-is-needed-to-create-a-block-theme)
++ [Official Block Editor Handbook](https://developer.wordpress.org/block-editor/how-to-guides/themes/create-block-theme/#what-is-needed-to-create-a-block-theme)
 
++ [Theme.js reference - v1](https://developer.wordpress.org/block-editor/reference-guides/theme-json-reference/theme-json-v1/)
++ [Theme.js Config File Reference](https://developer.wordpress.org/block-editor/reference-guides/theme-json-reference/theme-json-living/)
++ [Core Blocks Reference](https://developer.wordpress.org/block-editor/reference-guides/core-blocks/)
++ [Fullsiteediting.com Article](https://fullsiteediting.com/lessons/templates-and-template-parts/) by Carolina Nymark, January 2022
 
 ## Theme Setup Instructions.
 
@@ -175,3 +179,40 @@ It seems that the numbers in the container classes are randomly generated on eac
 }
 
 ```
+
+### Query lists
+
+
+
+```html
+QUERY BLOCK GROUPS
+ <!-- wp:group {"layout":{"inherit":false}} -->
+                <div class="wp-block-group">
+
+                    <!-- wp:query -->
+                        <div class="wp-block-query">
+
+                            <!-- wp:post-template -->
+
+                                    <!-- wp:post-title /-->
+                                    <!-- wp:post-date /-->
+                                    <!-- wp:post-excerpt /-->
+                                    <!-- wp:post-content /-->
+                                    <!-- wp:post-author /-->
+
+                            <!-- /wp:post-template -->
+                        
+                            <!-- wp:query-pagination -->
+                            <div class="wp-block-query-pagination">
+                                <!-- wp:query-pagination-previous /-->
+                                <!-- wp:query-pagination-numbers /-->
+                                <!-- wp:query-pagination-next /-->
+                            </div>
+                            <!-- /wp:query-pagination -->
+                        </div>
+
+                    <!-- /wp:query -->                        
+
+                </div>
+                <!-- /wp:block -->
+                ```

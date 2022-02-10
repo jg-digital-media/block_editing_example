@@ -7,12 +7,14 @@ main {
     h2 {
 
         text-align: center;
-        color: white;
+        /* color: white; */
+        color: black;
     }
 
     p {
 
-        color: white;
+        /* color: white; */
+        color: black;
         text-align: center;
         margin-top: 10px;
     }
@@ -35,11 +37,13 @@ main {
         p {
 
             text-align: left;
+            color: black;
         }
 
         h3 {
 
-            color: white;
+            /* color: white; */
+            color: black;
         }
 
     }
@@ -73,13 +77,15 @@ main {
             h3 {
 
                 text-align: center;
-                color: white;
+                /* color: white; */
+                color: black;
             }
 
             p {
 
                 line-height: 2;
-                color: white;
+                /* color: white; */
+                color: black;
             }
         }
     }

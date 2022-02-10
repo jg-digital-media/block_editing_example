@@ -14,7 +14,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 
 
 */
-/* Last Update: 08-02-2022 - 15:14 */
+/* Last Update: 10-02-2022 - 14:29 */
 /*Styles*/
 body {
   background: #65b7ff; }
@@ -43,9 +43,11 @@ main {
   width: 100%; }
   main h2 {
     text-align: center;
-    color: white; }
+    /* color: white; */
+    color: black; }
   main p {
-    color: white;
+    /* color: white; */
+    color: black;
     text-align: center;
     margin-top: 10px; }
   main #content {
@@ -59,10 +61,12 @@ main {
     border: solid red 1px; }
     main .primary_content p,
     main .secondary_content p {
-      text-align: left; }
+      text-align: left;
+      color: black; }
     main .primary_content h3,
     main .secondary_content h3 {
-      color: white; }
+      /* color: white; */
+      color: black; }
   main .primary_content {
     width: 71%; }
   main .secondary_content {
@@ -81,12 +85,14 @@ main {
       main .widget_areas .widget_area_two h3,
       main .widget_areas .widget_area_three h3 {
         text-align: center;
-        color: white; }
+        /* color: white; */
+        color: black; }
       main .widget_areas .widget_area_one p,
       main .widget_areas .widget_area_two p,
       main .widget_areas .widget_area_three p {
         line-height: 2;
-        color: white; }
+        /* color: white; */
+        color: black; }
 
 footer {
   /* background: gray; */

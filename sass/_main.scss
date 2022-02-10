@@ -19,6 +19,13 @@ main {
         margin-top: 10px;
     }
 
+    .wp-block-group {
+        /* width: 47%; */
+        width: 85%;
+        display: block;
+        margin: 0 auto;
+    }
+
     #content {
 
         display: flex;
@@ -32,7 +39,9 @@ main {
     .primary_content,
     .secondary_content {
 
-        border: solid red 1px;
+        /* border: solid red 1px; */
+        background: lightblue;
+        padding: 6px;
 
         p {
 
@@ -71,8 +80,10 @@ main {
         .widget_area_two,
         .widget_area_three {
 
-            border: solid red 1px;
+            /* border: solid red 1px; */
             width: 35%;
+            background: lightblue;
+            padding: 6px;
 
             h3 {
 

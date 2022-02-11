@@ -14,7 +14,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 
 
 */
-/* Last Update: 10-02-2022 - 17:26 */
+/* Last Update: 11-02-2022 - 12:21 */
 /*Styles*/
 body {
   background: #65b7ff; }
@@ -40,7 +40,15 @@ header {
 main {
   display: block;
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+    /*
+    
+    body
+
+    .wp-site-blocks  - this would seem to be a containing element in the document tree
+        .wp-block-template-part - template parts
+        #aside-subtitle-aside-html-template-part
+    */ }
   main h2 {
     text-align: center;
     /* color: white; */
@@ -55,50 +63,50 @@ main {
     width: 85%;
     display: block;
     margin: 0 auto; }
-  main #content {
+  main .wp-site-blocks .wp-block-template-part #content {
     display: flex;
     flex-direction: row-reverse;
     margin: 0 auto;
     gap: 3px;
     width: 90%; }
-  main .primary_content,
-  main .secondary_content {
+  main .wp-site-blocks .wp-block-template-part .primary_content,
+  main .wp-site-blocks .wp-block-template-part .secondary_content {
     /* border: solid red 1px; */
     background: lightblue;
     padding: 6px; }
-    main .primary_content p,
-    main .secondary_content p {
+    main .wp-site-blocks .wp-block-template-part .primary_content p,
+    main .wp-site-blocks .wp-block-template-part .secondary_content p {
       text-align: left;
       color: black; }
-    main .primary_content h3,
-    main .secondary_content h3 {
+    main .wp-site-blocks .wp-block-template-part .primary_content h3,
+    main .wp-site-blocks .wp-block-template-part .secondary_content h3 {
       /* color: white; */
       color: black; }
-  main .primary_content {
+  main .wp-site-blocks .wp-block-template-part .primary_content {
     width: 71%; }
-  main .secondary_content {
+  main .wp-site-blocks .wp-block-template-part .secondary_content {
     width: 29%; }
-  main .widget_areas {
+  main .wp-site-blocks .wp-block-template-part .widget_areas {
     width: 90%;
     display: block;
     margin: 20px auto;
     display: flex; }
-    main .widget_areas .widget_area_one,
-    main .widget_areas .widget_area_two,
-    main .widget_areas .widget_area_three {
+    main .wp-site-blocks .wp-block-template-part .widget_areas .widget_area_one,
+    main .wp-site-blocks .wp-block-template-part .widget_areas .widget_area_two,
+    main .wp-site-blocks .wp-block-template-part .widget_areas .widget_area_three {
       /* border: solid red 1px; */
       width: 35%;
       background: lightblue;
       padding: 6px; }
-      main .widget_areas .widget_area_one h3,
-      main .widget_areas .widget_area_two h3,
-      main .widget_areas .widget_area_three h3 {
+      main .wp-site-blocks .wp-block-template-part .widget_areas .widget_area_one h3,
+      main .wp-site-blocks .wp-block-template-part .widget_areas .widget_area_two h3,
+      main .wp-site-blocks .wp-block-template-part .widget_areas .widget_area_three h3 {
         text-align: center;
         /* color: white; */
         color: black; }
-      main .widget_areas .widget_area_one p,
-      main .widget_areas .widget_area_two p,
-      main .widget_areas .widget_area_three p {
+      main .wp-site-blocks .wp-block-template-part .widget_areas .widget_area_one p,
+      main .wp-site-blocks .wp-block-template-part .widget_areas .widget_area_two p,
+      main .wp-site-blocks .wp-block-template-part .widget_areas .widget_area_three p {
         line-height: 2;
         /* color: white; */
         color: black; }

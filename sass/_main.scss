@@ -26,77 +26,93 @@ main {
         margin: 0 auto;
     }
 
-    #content {
-
-        display: flex;
-        flex-direction: row-reverse;
-        margin: 0 auto;
-        gap: 3px;
-        width: 90%;
-
-    }
-
-    .primary_content,
-    .secondary_content {
-
-        /* border: solid red 1px; */
-        background: lightblue;
-        padding: 6px;
-
-        p {
-
-            text-align: left;
-            color: black;
-        }
-
-        h3 {
-
-            /* color: white; */
-            color: black;
-        }
-
-    }
-
+    /*
     
-    .primary_content {
+    body
 
-        width: 71%;
-    }
+    .wp-site-blocks  - this would seem to be a containing element in the document tree
+        .wp-block-template-part - template parts
+        #aside-subtitle-aside-html-template-part
+    */
 
-    .secondary_content {
 
-        width: 29%;
+    .wp-site-blocks {
 
-    }
+        .wp-block-template-part {
 
-    .widget_areas {
+            #content {
 
-        width: 90%;
-        display: block;
-        margin: 20px auto;
-        display: flex;
+                display: flex;
+                flex-direction: row-reverse;
+                margin: 0 auto;
+                gap: 3px;
+                width: 90%;
 
-        .widget_area_one,
-        .widget_area_two,
-        .widget_area_three {
-
-            /* border: solid red 1px; */
-            width: 35%;
-            background: lightblue;
-            padding: 6px;
-
-            h3 {
-
-                text-align: center;
-                /* color: white; */
-                color: black;
             }
 
-            p {
+            .primary_content,
+            .secondary_content {
 
-                line-height: 2;
-                /* color: white; */
-                color: black;
+                /* border: solid red 1px; */
+                background: lightblue;
+                padding: 6px;
+
+                p {
+
+                    text-align: left;
+                    color: black;
+                }
+
+                h3 {
+
+                    /* color: white; */
+                    color: black;
+                }
+
+            }
+
+            
+            .primary_content {
+
+                width: 71%;
+            }
+
+            .secondary_content {
+
+                width: 29%;
+
+            }
+
+            .widget_areas {
+
+                width: 90%;
+                display: block;
+                margin: 20px auto;
+                display: flex;
+
+                .widget_area_one,
+                .widget_area_two,
+                .widget_area_three {
+
+                    /* border: solid red 1px; */
+                    width: 35%;
+                    background: lightblue;
+                    padding: 6px;
+
+                    h3 {
+
+                        text-align: center;
+                        /* color: white; */
+                        color: black;
+                    }
+
+                    p {
+
+                        line-height: 2;
+                        /* color: white; */
+                        color: black;
+                    }
+                }
             }
         }
     }

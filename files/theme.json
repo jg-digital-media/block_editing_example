@@ -1,0 +1,219 @@
+{
+
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+
+    "version": "2",
+
+    "settings": {
+
+        "color": {
+            
+            "palette": [
+                {
+
+                    "slug":"light_blue",
+                    "color":"#65b7ff",
+                    "name":"jgdm-customised-blue-theme"
+                }, {
+
+                    "slug":"green_theme",
+                    "color":"#a1c36b",
+                    "name":"jgdm-customised-green-theme"
+
+                }
+            ]
+        }, "blocks": { 
+
+            "core/block": {
+
+                "color": {
+            
+                    "palette": [
+
+                        {
+
+                            "slug": "jgdm-codeblock-black",
+                            "color": "black",
+                            "name": "Code Block Black"
+                        }, {
+
+                            "slug": "jgdm-codeblock-red",
+                            "color": "red",
+                            "name": "Code Block Red"
+                        }
+
+
+                    ]
+                    
+                }
+            },
+
+            "core/heading": {
+
+                "color": {
+            
+                    "palette": [
+
+                        {
+
+                            "slug": "jgdm-heading-white",
+                            "color": "white",
+                            "name": "White"
+                        }, {
+
+                            "slug": "jgdm-heading-medium-blue",
+                            "color": "#00A0D2",
+                            "name": "Medium blue"
+                        }
+
+
+                    ]
+                }
+            }, 
+
+            "core/paragraph": {
+                
+                "color": {
+            
+                    "palette": [
+
+                        {
+
+                            "slug": "jgdm-para-yellow",
+                            "color": "yellow",
+                            "name": "Colour Yellow"
+                        }, {
+
+                            "slug": "jgdm-para-medium-green",
+                            "color": "green",
+                            "name": "Colour Green"
+                        }
+
+
+                    ]
+                }
+
+            }, 
+
+            "core/links": {
+                
+                "color": {
+            
+                    "palette": [
+
+                        {
+
+                            "slug": "jgdm-para-blue",
+                            "color": "Blue",
+                            "name": "Link Colour Blue"
+                        }
+
+                    ]
+                    
+                }
+
+
+            }
+            
+        },   
+
+        
+
+        "typography": {
+
+            
+            "fontSizes": [
+                {
+                    "slug": "font-medium",
+                    "size": "16px",
+                    "name": "font-16"
+                },
+                {
+                    "slug": "",
+                    "size": "",
+                    "name": ""
+                },
+                {
+                    "slug": "",
+                    "size": "",
+                    "name": ""
+                }
+            ]
+        },
+
+        "layout": {
+
+        }
+
+    }, 
+
+    "styles": {
+
+        "blocks": {            
+          
+
+                "custom": {
+
+                }, 
+
+                "layout": {
+
+                    "contentSize": "840px",
+                    "wideSize": "1200px"
+                }, 
+
+                "spacing": {
+
+                },
+
+                "typography": {
+
+                }
+
+            }        
+
+
+
+
+    },
+
+    "templateParts": [
+
+        {
+            "name": "header",
+            "area": "header",
+            "title": "Template Part Header"
+        }, {
+            "name": "footer",
+            "area": "footer",
+            "title": "Template Part Footer"
+        }, {
+            "name": "general",
+            "area": "general",
+            "title": "Template Part General"
+        }, {
+            "name": "aside",
+            "area": "aside",
+            "title": "Template Part Aside Element"
+        }
+    ],
+
+    "customTemplates": [
+
+        {
+
+            "name": "page-home",
+            "title": "Page Title"
+        }, {
+
+            "name": "page-contact",
+            "title": "Contact",
+            "postTypes": [
+
+                "page"
+            ]
+        }
+
+    ]
+
+}

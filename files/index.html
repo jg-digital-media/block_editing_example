@@ -1,0 +1,90 @@
+<!-- wp:template-part {"slug":"tp_header", "tagName": "head"} /-->
+
+<main id="container">    
+
+    <p> index.html - main fallback template </p>
+
+    <h2>Content Subtitle - </h2>
+    
+
+    <section id="content">
+
+
+        <aside class="secondary_content">
+        <!-- wp:template-part {"slug":"tp_aside", "tagName": "aside"} /-->
+        </aside>
+
+        <section class="primary_content">
+
+            <h3>Section Subtitle</h3>
+
+            <p>Primary content goes here! Below is a list of the posts currently available on this site.</p>
+
+            <!-- <display list of posts> -->
+
+            <!-- wp:group {"layout":{"inherit":false}} -->
+            <div class="wp-block-group">
+
+                <!-- wp:query -->
+                    <div class="wp-block-query">
+
+                        <!-- wp:post-template -->
+
+                                <!-- wp:post-title /-->
+                                <!-- wp:post-date /-->
+                                <!-- wp:post-excerpt /-->
+
+                                <!-- wp:paragraph -->
+                                    <!-- wp:post-content /-->
+                                <!-- /wp:paragraph -->
+                                
+                                <!-- wp:post-author /-->
+
+                        <!-- /wp:post-template -->
+                    
+                        <!-- wp:query-pagination -->
+                        <div class="wp-block-query-pagination">
+                            <!-- wp:query-pagination-previous /-->
+                            <!-- wp:query-pagination-numbers /-->
+                            <!-- wp:query-pagination-next /-->
+                        </div>
+                        <!-- /wp:query-pagination -->
+                    </div>
+
+                <!-- /wp:query -->                        
+
+            </div>
+            <!-- /wp:block -->
+
+        </section>
+
+    </section>
+
+    <section class="widget_areas">
+
+        <div class="widget_area_one">
+
+            <h3>Widget Area </h3>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="widget_area_two">
+
+            <h3>Widget Area </h3>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="widget_area_three">
+
+            <h3>Widget Area </h3>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- wp:template-part {"slug":"tp_footer", "tagName", "footer"} /-->

@@ -1,5 +1,6 @@
 # Basic Block Theme Developing for WordPress (5.9+)  
-**Updated:**  10/02/2022 - 14:53  v3
+**Updated:**  11/02/2022 - 09:59 v4
+
 
 ## Source Links
 
@@ -10,12 +11,21 @@
 + [Core Blocks Reference](https://developer.wordpress.org/block-editor/reference-guides/core-blocks/)
 + [Fullsiteediting.com Article](https://fullsiteediting.com/lessons/templates-and-template-parts/) by Carolina Nymark, January 2022
 
+
+## Overview
+
+I've taken the post list out again for now. The code is available in this Readme document.  Every time I think I'm getting somewhere with Full Site editing in WordPress another spanner seems to be thrown in the works.
+
+So for now I've added the basics so little or no content is drawn from the template part files but the areas used insteasd are added from the Site Editor.
+
+You can clone this repository to your own system and the files should help you get started with your own project.
+
 ## Theme Setup Instructions.
 
-Add the `block_editing_example` directory and its contents to your WordPress installation inside `wp-content/themes` directory.
++ You can clone the files in this repository onto your system with the following command - `git clone https://github.com/jg-digital-media/jgdm_block_editing_example`
 
-You can clone the files into that directory with the following command - `git clone https://github.com/jg-digital-media/block_editing_example`
 
++ Add the `jgdm_block_editing_example` directory and its contents to your WordPress installation inside `wp-content/themes` directory.
 
 ```
 index.php
@@ -23,9 +33,12 @@ style.css
 templates(d) -> index.html
 ```
 
-The `index.php` should remain blank but remain in your theme files as a fallback file. 
+For Templates in Full Site Editing, you should use HTML files in the `templates` folder.  For added efficiency and oranisation you can further split templates into parts and put them `parts` folder. A Block Editing theme must also include an `index.html` template inside the `templates` directory.
 
-These files are set up with full site block editing for WordPres in mind
+
++ The `index.php` file should remain blank but remain in your theme files as a fallback file. (If Gutenburg plugin is not activated WordOress will look for this theme file.)
+
++ These files are set up with full site block editing for WordPres in mind
 
   + Edit the template files to change the markup in the `templates` directory
 
@@ -37,8 +50,7 @@ These files are set up with full site block editing for WordPres in mind
 
 
 
-For Templates, you should use HTML files in a `templates` folder.  For added efficiency and oranisation you can further split templates into parts and put them `parts` folder. A Block Editing theme must also include an `index.html` template inside the `templates` directory.
-
+### Theme File Structure
 
 ```
 index.php
@@ -51,7 +63,7 @@ style.css
 
 ```
 
-Separate folder for style options can also be used in your file structure - `styles`. a collection of JSON files that represent certain style presets.
+A Separate folder for style options can also be used in your file structure - `styles`. a collection of JSON files that represent certain style presets.
 
 
 ```
@@ -79,15 +91,16 @@ In WordPress 5.9 and beyond, template parts are added using self closing blocks 
 <!-- wp:template-part {"slug":"footer"} /-->
 ```
 
-Looks up the template part files in `block-editing_example -> parts -> header.html` and `block-editing_example -> parts -> footer.html`.
++ Looks up the template part files in `block-editing_example -> parts -> header.html` and `block-editing_example -> parts -> footer.html`.
 
 
 
 ### Using the Query loop with group logs - `wp:post`, `wp:query`
 
--> The following code provided by the WordPress handbook demonstrates how to display a list of posts.
++ `wp-group` works a container blog for lists of posts.
 
-wp group works a container blog for lists of posts.
++ The following code provided by the WordPress handbook demonstrates how to display a list of posts.
+
 
 ```html
 <!-- wp:group {"layout":{"inherit":true}} -->
@@ -105,7 +118,6 @@ To add a query loop, use a group block element with the class `wp-block-query`.
 
 ```html
 
-
 <!-- wp:group {"layout":{"inherit":true},"tagName":"main"}} -->
 <div class="wp-block-group">
 
@@ -122,7 +134,7 @@ To add a query loop, use a group block element with the class `wp-block-query`.
 </div>
 ```
 
-wp query pagination - Pagination elements when they're reqiired go inside the query block, which itself goes inside the group block.
+wp query pagination - Pagination elements when they're required go inside the query block, which itself goes inside the group block.
 
 ```html
 
@@ -186,33 +198,51 @@ It seems that the numbers in the container classes are randomly generated on eac
 
 ```html
 QUERY BLOCK GROUPS
+
  <!-- wp:group {"layout":{"inherit":false}} -->
-                <div class="wp-block-group">
+    <div class="wp-block-group">
 
-                    <!-- wp:query -->
-                        <div class="wp-block-query">
+        <!-- wp:query -->
+            <div class="wp-block-query">
 
-                            <!-- wp:post-template -->
+                <!-- wp:post-template -->
 
-                                    <!-- wp:post-title /-->
-                                    <!-- wp:post-date /-->
-                                    <!-- wp:post-excerpt /-->
-                                    <!-- wp:post-content /-->
-                                    <!-- wp:post-author /-->
+                        <!-- wp:post-title /-->
+                        <!-- wp:post-date /-->
+                        <!-- wp:post-excerpt /-->
+                        <!-- wp:post-content /-->
+                        <!-- wp:post-author /-->
 
-                            <!-- /wp:post-template -->
-                        
-                            <!-- wp:query-pagination -->
-                            <div class="wp-block-query-pagination">
-                                <!-- wp:query-pagination-previous /-->
-                                <!-- wp:query-pagination-numbers /-->
-                                <!-- wp:query-pagination-next /-->
-                            </div>
-                            <!-- /wp:query-pagination -->
-                        </div>
-
-                    <!-- /wp:query -->                        
-
+                <!-- /wp:post-template -->
+            
+                <!-- wp:query-pagination -->
+                <div class="wp-block-query-pagination">
+                    <!-- wp:query-pagination-previous /-->
+                    <!-- wp:query-pagination-numbers /-->
+                    <!-- wp:query-pagination-next /-->
                 </div>
-                <!-- /wp:block -->
-                ```
+                <!-- /wp:query-pagination -->
+            </div>
+
+        <!-- /wp:query -->                        
+
+    </div>
+    <!-- /wp:block -->
+```
+
+
+
+### Tips/Pointers
+
+No need for document type (DTD) elements in header.html
+
+Templates are loaded in the `<body>` inside a `<div>` with the class `"wp-site-blocks"`:
+
+
+Styling with Block Template Elements
+
+ + `.wp-site-blocks`  - this would seem to be a containing element in the document tree
+ + `.wp-block-template-part` - template parts
+ + `#aside-subtitle-aside-html-template-part`
+    */
+

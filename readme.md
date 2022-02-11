@@ -1,5 +1,5 @@
 # Basic Block Theme Developing for WordPress (5.9+)  
-**Updated:**  11/02/2022 - 09:59 v4
+**Updated:**  11/02/2022 - 15:39 v4
 
 
 ## Source Links
@@ -50,7 +50,7 @@ For Templates in Full Site Editing, you should use HTML files in the `templates`
 
 
 
-### Theme File Structure
+## Theme File Structure
 
 ```
 index.php
@@ -93,9 +93,107 @@ In WordPress 5.9 and beyond, template parts are added using self closing blocks 
 
 + Looks up the template part files in `block-editing_example -> parts -> header.html` and `block-editing_example -> parts -> footer.html`.
 
+## Theme Block Markup
+
+```html 
+
+IMAGE BLOCK EXAMPLE
+<!-- wp:image -->
+<!-- /wp:image -->
+```
+
+```html
+
+HEADING BLOCK
+<!-- wp:heading -->
+<!-- /wp:heading -->
+```
+
+```html
+
+PARAGRAPH BLOCK
+<!-- wp:paragraph -->
+<!-- /wp:paragraph-->
+```
 
 
-### Using the Query loop with group logs - `wp:post`, `wp:query`
+```html
+
+CUSTOM HTML BLOCK
+<!-- wp:html -->
+
+  <p>HTML Custom HTML Block</p> 
+
+<!-- /wp:html -->
+```
+
+```html
+
+GROUP BLOCK EXAMPLE
+<!-- wp:group -->
+<div class="wp-block-group"></div>
+<!-- /wp:group -->
+```
+
+```html
+
+COLUMN BLOCK
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Column 2</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Column 1</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+```
+
+```html
+
+QUERY LIST BLOCK
+<!-- wp:query {"queryId":11,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:post-title /-->
+
+<!-- wp:post-date /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination -->
+<!-- wp:query-pagination-previous /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination --></div>
+<!-- /wp:query -->
+```
+
+```html
+
+PAGE LIST BLOCK
+<!-- wp:page-list /-->
+```
+
+```html
+
+TABLE BLOCK with 2 columns and 2 rows
+<!-- wp:table -->
+<figure class="wp-block-table">
+    <table>
+        <tbody>
+            <tr>
+                <td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table></figure>
+<!-- /wp:table -->
+```
+
+
+
+## Example: Using the Query loop with group logs - `wp:post`, `wp:query`
 
 + `wp-group` works a container blog for lists of posts.
 
@@ -158,7 +256,7 @@ wp query pagination - Pagination elements when they're required go inside the qu
 
 ```
 
-Uaing these post block tags will add a number of classes to the html of your project.
+Using these post block tags will add a number of classes to the html of your project.
 
 Examples of which include:
 
@@ -238,11 +336,13 @@ No need for document type (DTD) elements in header.html
 
 Templates are loaded in the `<body>` inside a `<div>` with the class `"wp-site-blocks"`:
 
+Template parts use a `<div>` element by default.
 
 Styling with Block Template Elements
 
  + `.wp-site-blocks`  - this would seem to be a containing element in the document tree
  + `.wp-block-template-part` - template parts
  + `#aside-subtitle-aside-html-template-part`
-    */
+ 
+ 
 

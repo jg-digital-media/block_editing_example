@@ -1,5 +1,5 @@
 # Basic Block Theme Developing for WordPress (5.9+)  
-**Updated:**  11/02/2022 - 15:39 v4
+**Updated:**  14/02/2022 - 12:50 v5
 
 
 ## Source Links
@@ -14,11 +14,13 @@
 
 ## Overview
 
-I've taken the post list out again for now. The code is available in this Readme document.  Every time I think I'm getting somewhere with Full Site editing in WordPress another spanner seems to be thrown in the works.
+I've taken the post list out again for now. The code is available in this Readme document. The repository is currently set up for manual template parts with `.html` templates. But you can easily change this when you install the theme to your own WordPress project.
 
-So for now I've added the basics so little or no content is drawn from the template part files but the areas used insteasd are added from the Site Editor.
+So for now I've added the basics so little or no content is drawn from the template part files but the areas used instead are added from the Site Editor.
 
 You can clone this repository to your own system and the files should help you get started with your own project.
+
+This is a whole new way of developing Websites with WordPress and it has made its way into WordPress course in `5.8` and beyond so there's always going to be a bit of a learning curve. However the notes below should stand you in good stead.
 
 ## Theme Setup Instructions.
 
@@ -79,9 +81,7 @@ A Separate folder for style options can also be used in your file structure - `s
 
 ### Adding Template Parts
 
-In WordPress 5.9 and beyond, template parts are added using self closing blocks e.g,  `<!-- wp:site-title /-->`, that implements a site title as defined in WordPress Admin Area and displays it to the Screen
-
-+ `<!-- wp:template-part {"slug":"header"} /-->`  - loads a given html template
+In WordPress 5.9 and beyond, template parts are added using self closing blocks e.g,  `<!-- wp:site-title /-->`, that implements a site title as defined in WordPress Admin Area and displays it to the Screen.  In order to display a template part in code`<!-- wp:template-part {"slug":"header"} /-->`  - loads a given html template with a specific URL slug.  It seems to me that the "slug" is the JSON key "name" in the `theme.json` file.
 
 **Example** - `block-editing_example -> templates -> index.html`
 
@@ -91,7 +91,14 @@ In WordPress 5.9 and beyond, template parts are added using self closing blocks 
 <!-- wp:template-part {"slug":"footer"} /-->
 ```
 
-+ Looks up the template part files in `block-editing_example -> parts -> header.html` and `block-editing_example -> parts -> footer.html`.
+This hooks in the template part files in `block-editing_example -> parts -> header.html` and `block-editing_example -> parts -> footer.html`.
+
+To make sure that the template parts use the element you want (which is not always the case by default) follow the steps below. 
+
++ Go the `Site Editor` in the `Appearance` Menu. 
++ Site -> Select the containing part of the Block.  
++ Look for the "*Advanced*" panel and select the HTML `element` to target from the drop down menu. The header and footer elements should now be tied to the appropriate class.
+ 
 
 ## Theme Block Markup
 
@@ -328,21 +335,120 @@ QUERY BLOCK GROUPS
     <!-- /wp:block -->
 ```
 
+## Template &amp; Template Part Creation
+
+### Site Editor
+
+You can edit and create content directly via the Site editor.
+
+with Template Part Blocks
+
+As an example below is the Header Template Part with self closing tags for the Site Title and Tagline.
 
 
-### Tips/Pointers
+#### parts/footer.html
+```html
 
-No need for document type (DTD) elements in header.html
+        <!-- wp:site-title /-->
+        <!-- wp:site-tagline /-->
 
-Templates are loaded in the `<body>` inside a `<div>` with the class `"wp-site-blocks"`:
+```
 
-Template parts use a `<div>` element by default.
+They are self closing tags that WordPress converts to raw HTML to be displayed in the browser. 
 
-Styling with Block Template Elements
+```html
+<header class="wp-block-template-part">
+    
+        <h1 class="wp-block-site-title"><a href="http://localhost/wordpress/subdomain" rel="home" aria-current="page">WordPress Subdomain</a></h1>
+        <p class="wp-block-site-tagline">Just another WordPress site</p>
+</header>
+```
 
- + `.wp-site-blocks`  - this would seem to be a containing element in the document tree
- + `.wp-block-template-part` - template parts
- + `#aside-subtitle-aside-html-template-part`
+You can then style the template parts accordingly with CSS.  I'm using the SASS compiler as I usually do in my projects. The SASS is compiled in `style.scss` which takes imported sass partials from the sass directory in my project.
+
+```scss
+
+//sass to css
+
+
+.wp-site-blocks {
+
+
+    //header 
+    header.wp-block-template-part {   
+        
+        background: #070c41;
+        border-bottom: 3px white solid;  
+
+        h1 {
+
+            text-align: center;
+            color: white;
+
+            a {
+                color: white;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        h2 {
+            
+            text-align: center;
+            color: white;
+
+        }
+
+        p {
+
+            text-align: center;
+            color: white;
+        }
+
+    }
+
+}
+
+
+```
+
+
+### Template Editing - Custom Templates
+
+1. Create or edit an existing Post or Page via the admin area.
+
+2. In the template panel click the "new" link and type in a name for your custom template. e.g. `new_custom_template_v1`.
+
+3. Clicking new or edit to go into a template editing screen
+
+4. Click save/Update to save your changes to a Template
+
+
+
+
+
+
+## Tips/Pointers
+
++ No need for document type (DTD) elements in header.html
+
++ Templates are loaded in the `<body>` inside a `<div>` with the class `"wp-site-blocks"`:
+
++ Template parts use a `<div>` element by default.
+
++ Styling with Block Template Elements
+
+  + `.wp-site-blocks`  - this would seem to be a containing element in the document tree
+  + `.wp-block-template-part` - template parts
+  + `#aside-subtitle-aside-html-template-part`
+
+
+  + To make sure that the template parts use the element you want (which is not always the case by default) follow the steps below. 
+    + Go the `Site Editor` in the `Appearance` Menu. 
+    + Site -> Select the containing part of the Block.  
+    + Look for the "Advanced" panel and select the HTML `element` to target from the drop down menu. The header and footer elements should now be tied to the appropriate class.
  
  
 

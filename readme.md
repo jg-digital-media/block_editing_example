@@ -1,5 +1,5 @@
 # Basic Block Theme Developing for WordPress (5.9+)  
-**Updated:**  14/02/2022 - 12:50 v5
+**Updated:**  14/02/2022 - 16:53 v5
 
 
 ## Source Links
@@ -302,37 +302,63 @@ It seems that the numbers in the container classes are randomly generated on eac
 
 
 ```html
-QUERY BLOCK GROUPS
 
- <!-- wp:group {"layout":{"inherit":false}} -->
-    <div class="wp-block-group">
+<!-- QUERY BLOCK GROUPS - Tags/Elements required -->
 
-        <!-- wp:query -->
-            <div class="wp-block-query">
 
-                <!-- wp:post-template -->
+<!-- wp:group {"layout":{"inherit":false}} -->
+<div class="wp-block-group">
 
-                        <!-- wp:post-title /-->
-                        <!-- wp:post-date /-->
-                        <!-- wp:post-excerpt /-->
-                        <!-- wp:post-content /-->
-                        <!-- wp:post-author /-->
+    <!-- wp:query -->
+    <div class="wp-block-query">
 
-                <!-- /wp:post-template -->
-            
-                <!-- wp:query-pagination -->
-                <div class="wp-block-query-pagination">
-                    <!-- wp:query-pagination-previous /-->
-                    <!-- wp:query-pagination-numbers /-->
-                    <!-- wp:query-pagination-next /-->
-                </div>
-                <!-- /wp:query-pagination -->
-            </div>
 
-        <!-- /wp:query -->                        
+        <div class="wp-block-query-pagination">
+
+        </div>
+        <!-- /wp:query-pagination -->
 
     </div>
-    <!-- /wp:block -->
+    <!-- /wp:query -->                        
+
+</div>
+<!-- /wp:block -->
+
+```
+
+e.g. 
+
+```html
+ <!-- wp:group {"layout":{"inherit":false}} -->
+<div class="wp-block-group">
+
+    <!-- wp:query -->
+    <div class="wp-block-query">
+
+        <!-- wp:post-template -->
+
+                <!-- wp:post-title /-->
+                <!-- wp:post-date /-->
+                <!-- wp:post-excerpt /-->
+                <!-- wp:post-content /-->
+                <!-- wp:post-author /-->
+
+        <!-- /wp:post-template -->
+    
+        <!-- wp:query-pagination -->
+        <div class="wp-block-query-pagination">
+            <!-- wp:query-pagination-previous /-->
+            <!-- wp:query-pagination-numbers /-->
+            <!-- wp:query-pagination-next /-->
+        </div>
+        <!-- /wp:query-pagination -->
+
+    </div>
+    <!-- /wp:query -->                        
+
+</div>
+<!-- /wp:block -->
+
 ```
 
 ## Template &amp; Template Part Creation

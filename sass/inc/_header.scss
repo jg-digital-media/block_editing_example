@@ -9,27 +9,21 @@ header {
     background: $bg_secondary;
     border-bottom: 3px white solid;
 
-    img#main_logo {
-
-        border-radius: 50%;
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        /* bottom: 30px; */
-        /* bottom: 50px; */
-        top: 10px;
-    }
-
     h1 {
 
         text-align: center;
         color: $col_primary;
+        margin: 0 auto;
 
         span {
             color: $col-tertiary;
             font-size: 12px;
         }
         
+    }
+
+    h2 {
+        margin: 0 auto;
     }
 
 }

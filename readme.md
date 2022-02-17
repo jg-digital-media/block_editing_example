@@ -1,5 +1,5 @@
 # Basic Block Theme Developing for WordPress (5.9+)  
-**Updated:**  14/02/2022 - 16:53 v5
+**Updated:**  17/02/2022 - 09:57 v5
 
 
 ## Source Links
@@ -14,7 +14,7 @@
 
 ## Overview
 
-I've taken the post list out again for now. The code is available in this Readme document. The repository is currently set up for manual template parts with `.html` templates. But you can easily change this when you install the theme to your own WordPress project.
+The repository is currently set up for manual template parts with `.html` templates in the `templates/` directory. But you can easily change this when you install the theme to your own WordPress project.
 
 So for now I've added the basics so little or no content is drawn from the template part files but the areas used instead are added from the Site Editor.
 
@@ -37,6 +37,7 @@ templates(d) -> index.html
 
 For Templates in Full Site Editing, you should use HTML files in the `templates` folder.  For added efficiency and oranisation you can further split templates into parts and put them `parts` folder. A Block Editing theme must also include an `index.html` template inside the `templates` directory.
 
++ In the admin area you will want to create some test "Pages" and "Posts" to make sure the theme is picking up content and the navigation is working correctly. 
 
 + The `index.php` file should remain blank but remain in your theme files as a fallback file. (If Gutenburg plugin is not activated WordOress will look for this theme file.)
 
@@ -50,7 +51,11 @@ For Templates in Full Site Editing, you should use HTML files in the `templates`
 
   + There are two files that are required to activate any theme: These are `index.php` and `style.css`.
 
-
+  + Theme supports added: (functions.php)
+    + `add_theme_support( 'post-thumbnails' ); `
+    + `add_theme_support( 'editor-styles' );` 
+    + `add_theme_support( 'wp-block-styles' );`
+    + `add_theme_support( 'menus' );`
 
 ## Theme File Structure
 
@@ -198,7 +203,10 @@ TABLE BLOCK with 2 columns and 2 rows
 <!-- /wp:table -->
 ```
 
-
+NAVIGATION BLOCK EXAMPLE
+```html
+<!-- wp:navigation {"ref":156,"layout":{"type":"flex","justifyContent":"center"}} /-->
+```
 
 ## Example: Using the Query loop with group logs - `wp:post`, `wp:query`
 
@@ -218,6 +226,7 @@ TABLE BLOCK with 2 columns and 2 rows
 <div class="wp-block-group"></div>
 <!-- /wp:group -->
 ```
+
 
 To add a query loop, use a group block element with the class `wp-block-query`.
 
@@ -297,8 +306,7 @@ It seems that the numbers in the container classes are randomly generated on eac
 
 ```
 
-### Query lists
-
+### Query Lists
 
 
 ```html
@@ -329,7 +337,9 @@ It seems that the numbers in the container classes are randomly generated on eac
 e.g. 
 
 ```html
- <!-- wp:group {"layout":{"inherit":false}} -->
+
+<!-- wp:group {"layout":{"inherit":false}} -->
+
 <div class="wp-block-group">
 
     <!-- wp:query -->
@@ -338,9 +348,9 @@ e.g.
         <!-- wp:post-template -->
 
                 <!-- wp:post-title /-->
-                <!-- wp:post-date /-->
                 <!-- wp:post-excerpt /-->
                 <!-- wp:post-content /-->
+                <!-- wp:post-date /-->
                 <!-- wp:post-author /-->
 
         <!-- /wp:post-template -->
@@ -453,8 +463,29 @@ You can then style the template parts accordingly with CSS.  I'm using the SASS 
 
 
 
+###  Page Templates
+
+The equivalent of the page.php template
+
+Templates for Website pages go in the `templates` folder.
+
+Select template on the page in the Admin area.
+
+Take note of the URL Slug for the page 
+
+Setup page navigation in header.html template part
+
+Paste in a navigation code block.
+
+Get the content, but make sure it is not using a query loop. WordPress knows which page to display. because you have selected it as the template in the admin site of the page.
+
+Site Navigation is a very different on WordPress block Editing. There's still the classic menu selector as it existed before but you then need to add a "Navigation" Block and select your saved menu via that block. Every edit or change you make to a menu, such as the "Navigation Label" creates a new version of the menu to select. Links are defined by  Page "slug".
 
 
+### Single Post Templates
+
+
+...
 
 ## Tips/Pointers
 

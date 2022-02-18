@@ -1,5 +1,5 @@
 # Basic Block Theme Developing for WordPress (5.9+)  
-**Updated:**  17/02/2022 - 09:29 v6
+**Updated:**  18/02/2022 - 14:30 v7
 
 
 ## Source Links
@@ -514,6 +514,17 @@ For single post template there is a Template hierarchy that comes into play.  If
 ...
 
 ## Archive Templates
+
++ Archive templates require the `archive.html` template.
+
++ The post terms block will add a list of the available categories
+    
+```html
+
+<!-- wp:post-terms {"term":"category"} /-->
+```
+
++ [get list of tags]
 
 ...
 

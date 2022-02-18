@@ -1,7 +1,30 @@
 
-/* WP Site Blocks  - Containing element for WP Blocks*/
+
+
+/*******************
+
+BLOCK EDITING CONTAINING STYLES FOR CSS
+
+.wp-site-blocks - containing element for all WordPress blocks
+    
+    .wp-block-template-part - containing element for Template Part Blocks
+
+    .wp-block-group - Block Group Containing 
+
+        .wp-block-query  - Container for the Query List
+
+            .wp-block-post-pagination
+
+            .wp-block-post-template - Container element for a Query Tenplate
+
+                .wp-block-post - Containing Element for a Block Post
+
+*******************/
+
+
 .wp-site-blocks {
 
+    // paragraph styling
     p {
         /* text-align: center; */
     }
@@ -12,112 +35,140 @@
 
     }
 
+    
     .wp-block-group {
 
         content: "";
 
-        // wp-block-query
+
+        // Category list for archive pages
+        .wp-block-post-terms {
+
+            a {
+                
+                color: #07480f;
+                font-weight: bold;
+            }
+        }
+
+        /* Query Post List wp-block-query */
         .wp-block-query {
 
-          // wp-post-template
-          .wp-post-template {
+            /* color: red; */
+            color: black;
+
+            // wp-post-template
+            .wp-block-post-template {
+
             
-            // wp-block-post    
-            .wp-block-post {
+                .category-uncategorised {
 
-                background: #6fbbf1;
-                transition: background .3s;
-
-                &:hover {
-
-                    background: #58c4b9;            
+                    /* border-bottom: solid black 1px; */
                 }
-            }
+            
+                // wp-block-post    
+                .wp-block-post {
 
-            .wp-block-post-title {
-
-                a {
-
-                    color: #fece6d;
+                    background: #6fbbf1;
+                    transition: background .3s;
 
                     &:hover {
 
-                        text-decoration: none;
+                        background: #58c4b9;            
+                    }            
+
+                    .wp-block-post-title {
+
+                        a {
+
+                            color: #da2020;
+
+                            &:hover {
+
+                                text-decoration: none;
+                            }
+
+                        }
+
+                    }                
+
+                    .wp-block-post-content {
+
+                        /* background: #3ab3fe; */
+
+                        .wp-block-image {
+
+                            border: solid red 1px;
+                        }
+
                     }
 
                 }
 
             }
 
-            .wp-block-post-content {
-
-                /* background: #3ab3fe; */
-
-                .wp-block-image {
-
-                    border: solid red 1px;
-                }
-
-            }
-        }
-
-    }
+        }  
 
 
-              // wp-block-post-title
+        // wp-block-post-title
 
-        //wp-block-query post-list
+        // wp-block-query post-list
         .post-list {
 
             background: none;
             margin: 0;
-    
-            li {
-    
-                background: none;
-                border-bottom: solid black 1px;
-                border-bottom: none;
-    
-                &:hover {
-    
+
+            // wp-post-template
+            .wp-block-post-template {
+
+               // wp-block-post
+               .wp-block-post {
+
                     background: none;
+                    font-size: 12px;
+
+                    &:hover {
+                        
+                        background: none;
+                    }                     
+    
+                    .wp-block-post-title {
+                        
+                        margin: 0;
+        
+                        a {
+        
+                            color: #434343;
+        
+                            &:hover {
+        
+                                text-decoration: none;
+                            }
+        
+                        }
+
+                    }
+
+                }
+
+                .wp-block-post-content {
+
+                    .wp-block-image {
+
+                        border: solid red 1px;
+                    }
                 }
     
-                
+            } 
     
-                .wp-block-post-title {
-                    
-                    margin: 0;
-    
-                    a {
-    
-                        color: #434343;
-    
-                        &:hover {
-    
-                            text-decoration: none;
-                        }
-    
-                    }
-    
-            }
-    
-            }
-    
-        }
-    }
+        }   
 
-
-    .category-uncategorised {
-
-        border-bottom: solid black 1px;
     }
 
 
 
 
-
-    // header 
+    /* header template part */
     header.wp-block-template-part {   
         
         background: $bg_secondary;
@@ -182,7 +233,7 @@
     }
 
  
-    // footer
+    /* footer template part */
     footer.wp-block-template-part {
 
         p {

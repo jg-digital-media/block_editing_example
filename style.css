@@ -14,7 +14,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 
 
 */
-/* Last Update: 14-02-2022 - 12:50 */
+/* Last Update: 17-02-2022 - 17:37 */
 /*Styles*/
 body {
   background: #65b7ff; }
@@ -32,6 +32,43 @@ header {
   header h2 {
     margin: 0 auto; }
 
+/* WP Site Blocks  - Containing element for WP Blocks*/
+.wp-site-blocks p {
+  /* text-align: center; */ }
+.wp-site-blocks .first-paragraph {
+  text-align: center; }
+.wp-site-blocks .wp-block-group {
+  content: ""; }
+  .wp-site-blocks .wp-block-group .wp-block-query .wp-post-template .wp-block-post {
+    background: #6fbbf1;
+    transition: background .3s; }
+    .wp-site-blocks .wp-block-group .wp-block-query .wp-post-template .wp-block-post:hover {
+      background: #58c4b9; }
+  .wp-site-blocks .wp-block-group .wp-block-query .wp-post-template .wp-block-post-title a {
+    color: #fece6d; }
+    .wp-site-blocks .wp-block-group .wp-block-query .wp-post-template .wp-block-post-title a:hover {
+      text-decoration: none; }
+  .wp-site-blocks .wp-block-group .wp-block-query .wp-post-template .wp-block-post-content {
+    /* background: #3ab3fe; */ }
+    .wp-site-blocks .wp-block-group .wp-block-query .wp-post-template .wp-block-post-content .wp-block-image {
+      border: solid red 1px; }
+  .wp-site-blocks .wp-block-group .post-list {
+    background: none;
+    margin: 0; }
+    .wp-site-blocks .wp-block-group .post-list li {
+      background: none;
+      border-bottom: solid black 1px;
+      border-bottom: none; }
+      .wp-site-blocks .wp-block-group .post-list li:hover {
+        background: none; }
+      .wp-site-blocks .wp-block-group .post-list li .wp-block-post-title {
+        margin: 0; }
+        .wp-site-blocks .wp-block-group .post-list li .wp-block-post-title a {
+          color: #434343; }
+          .wp-site-blocks .wp-block-group .post-list li .wp-block-post-title a:hover {
+            text-decoration: none; }
+.wp-site-blocks .category-uncategorised {
+  border-bottom: solid black 1px; }
 .wp-site-blocks header.wp-block-template-part {
   background: #070c41;
   border-bottom: 3px white solid; }
@@ -65,7 +102,7 @@ header {
     width: 85%;
     display: block;
     margin: 0 auto; }
-.wp-site-blocks p {
+.wp-site-blocks footer.wp-block-template-part p {
   text-align: center; }
 
 footer {

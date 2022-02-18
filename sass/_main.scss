@@ -1,8 +1,123 @@
 
+/* WP Site Blocks  - Containing element for WP Blocks*/
 .wp-site-blocks {
 
+    p {
+        /* text-align: center; */
+    }
 
-    //header 
+    .first-paragraph {
+        
+        text-align: center;
+
+    }
+
+    .wp-block-group {
+
+        content: "";
+
+        // wp-block-query
+        .wp-block-query {
+
+          // wp-post-template
+          .wp-post-template {
+            
+            // wp-block-post    
+            .wp-block-post {
+
+                background: #6fbbf1;
+                transition: background .3s;
+
+                &:hover {
+
+                    background: #58c4b9;            
+                }
+            }
+
+            .wp-block-post-title {
+
+                a {
+
+                    color: #fece6d;
+
+                    &:hover {
+
+                        text-decoration: none;
+                    }
+
+                }
+
+            }
+
+            .wp-block-post-content {
+
+                /* background: #3ab3fe; */
+
+                .wp-block-image {
+
+                    border: solid red 1px;
+                }
+
+            }
+        }
+
+    }
+
+
+              // wp-block-post-title
+
+        //wp-block-query post-list
+        .post-list {
+
+            background: none;
+            margin: 0;
+    
+            li {
+    
+                background: none;
+                border-bottom: solid black 1px;
+                border-bottom: none;
+    
+                &:hover {
+    
+                    background: none;
+                }
+    
+                
+    
+                .wp-block-post-title {
+                    
+                    margin: 0;
+    
+                    a {
+    
+                        color: #434343;
+    
+                        &:hover {
+    
+                            text-decoration: none;
+                        }
+    
+                    }
+    
+            }
+    
+            }
+    
+        }
+    }
+
+
+    .category-uncategorised {
+
+        border-bottom: solid black 1px;
+    }
+
+
+
+
+
+    // header 
     header.wp-block-template-part {   
         
         background: $bg_secondary;
@@ -66,8 +181,13 @@
 
     }
 
-    p {
-        text-align: center;
+ 
+    // footer
+    footer.wp-block-template-part {
+
+        p {
+            text-align: center;
+        }
     }
 
 }

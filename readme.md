@@ -1,5 +1,5 @@
 # Basic Block Theme Developing for WordPress (5.9+)  
-**Updated:**  21/02/2022 - 14:39 v8
+**Updated:**  11/03/2022 - 14:55 v8
 
 
 ## Source Links
@@ -215,7 +215,7 @@ NAVIGATION BLOCK EXAMPLE
 
 The following code provided by the WordPress handbook demonstrates how to display a list of posts in your browser homepage..
 
-+ `wp-block-group` works a container blog for lists of posts.
++ `wp-block-group` - works a container blog for lists of posts.
 
 
 ```html
@@ -233,7 +233,7 @@ The following code provided by the WordPress handbook demonstrates how to displa
 ```
 
 
- `wp-block-query` -To add a Query Loop, use a group block query class with a div element. Inside this is where you put your Post List Tags.
+ + `wp-block-query` - To add a Query Loop, use a group block query class with a div element. Inside this is where you put your Post List Tags.
 
 ```html
 

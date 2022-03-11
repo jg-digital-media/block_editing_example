@@ -14,7 +14,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 
 
 */
-/* Last Update: 18-02-2022 - 14:30 */
+/* Last Update: 21-02-2022 - 14:38 */
 /*Styles*/
 body {
   background: #65b7ff; }
@@ -46,58 +46,136 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
 
             .wp-block-post-pagination
 
-            .wp-block-post-template - Container element for a Query Tenplate
+            .wp-block-post-template - Container element for a Query Template
 
                 .wp-block-post - Containing Element for a Block Post
 
 *******************/
 .wp-site-blocks {
+  /* second heading paragraph for second query loop */
+  /* Styles for WP Group Block */
   /* header template part */
   /* footer template part */ }
   .wp-site-blocks p {
     /* text-align: center; */ }
   .wp-site-blocks .first-paragraph {
     text-align: center; }
+  .wp-site-blocks .blog_list_title {
+    text-align: center;
+    font-size: large;
+    border-bottom: 3px solid black; }
   .wp-site-blocks .wp-block-group {
     content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    /* Category List - all pages*/
     /* Query Post List wp-block-query */ }
     .wp-site-blocks .wp-block-group .wp-block-post-terms a {
       color: #07480f;
       font-weight: bold; }
+    .wp-site-blocks .wp-block-group .wp-block-categories-list, .wp-site-blocks .wp-block-group .wp-block-categories {
+      list-style: none;
+      padding: 0; }
+      .wp-site-blocks .wp-block-group .wp-block-categories-list li.cat-item, .wp-site-blocks .wp-block-group .wp-block-categories li.cat-item {
+        display: inline-block; }
+        .wp-site-blocks .wp-block-group .wp-block-categories-list li.cat-item a, .wp-site-blocks .wp-block-group .wp-block-categories li.cat-item a {
+          color: red; }
+          .wp-site-blocks .wp-block-group .wp-block-categories-list li.cat-item a:hover, .wp-site-blocks .wp-block-group .wp-block-categories li.cat-item a:hover {
+            text-decoration: none; }
     .wp-site-blocks .wp-block-group .wp-block-query {
       /* color: red; */
       color: black; }
-      .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .category-uncategorised {
-        /* border-bottom: solid black 1px; */ }
       .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post {
         background: #6fbbf1;
-        transition: background .3s; }
+        transition: background .3s;
+        /* Block post title */
+        /* Styling for a Query Loop Block */
+        /* archives-list classes */
+        /* wp-block-post-author inside query loop*/
+        /* wp-block-post-author inside query loop*/ }
         .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post:hover {
           background: #58c4b9; }
-        .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-title a {
-          color: #da2020; }
-          .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-title a:hover {
-            text-decoration: none; }
+        .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-title {
+          text-align: center; }
+          .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-title a {
+            color: #da2020; }
+            .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-title a:hover {
+              text-decoration: none; }
         .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content {
-          /* background: #3ab3fe; */ }
+          /* background: #3ab3fe; */
+          /*Style  - Link,  inside a paragraph block, inside Query Loop Block */
+          /* Styling - Query Pagination Block */ }
           .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-image {
             border: solid red 1px; }
+          .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content p a {
+            color: red; }
+          .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination {
+            /* Query Pagination Block numbers */
+            /* pagination links.... */ }
+            .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-numbers a {
+              color: red;
+              font-weight: normal; }
+            .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-numbers a.page-numbers {
+              color: red; }
+              .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-numbers a.page-numbers:hover {
+                text-decoration: none; }
+            .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-numbers span {
+              /* page number link colour */
+              /* Sets the colour of the non clickable current page number - pagination block */ }
+              .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-numbers span.current {
+                color: red;
+                font-weight: bold; }
+              .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-numbers span.page-numbers {
+                color: blue; }
+            .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-next,
+            .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-previous {
+              color: red; }
+              .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-next:hover,
+              .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-previous:hover {
+                text-decoration: none; }
+              .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-next a,
+              .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-content .wp-block-query-pagination .wp-block-query-pagination-previous a {
+                color: red; }
+        .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-archives-list, .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-archives {
+          color: black;
+          list-style: none;
+          padding: 0; }
+          .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-archives-list li, .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-archives li {
+            height: 20px; }
+            .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-archives-list li a, .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-archives li a {
+              color: green;
+              margin: 10px 0; }
+        .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-author .wp-block-post-author__content {
+          color: blue; }
+        .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-author .wp-block-post-author__name {
+          color: blue; }
+        .wp-site-blocks .wp-block-group .wp-block-query .wp-block-post-template .wp-block-post .wp-block-post-date time {
+          color: red; }
     .wp-site-blocks .wp-block-group .post-list {
       background: none;
       margin: 0; }
-      .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post {
-        background: none;
-        font-size: 12px; }
-        .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post:hover {
-          background: none; }
-        .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post .wp-block-post-title {
-          margin: 0; }
-          .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post .wp-block-post-title a {
-            color: #434343; }
-            .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post .wp-block-post-title a:hover {
-              text-decoration: none; }
-      .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post-content .wp-block-image {
-        border: solid red 1px; }
+      .wp-site-blocks .wp-block-group .post-list .wp-block-post-template {
+        /* post list query block - query loop*/ }
+        .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post {
+          background: none;
+          font-size: 12px; }
+          .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post:hover {
+            background: none; }
+          .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post .wp-block-post-title {
+            margin: 0; }
+            .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post .wp-block-post-title a {
+              color: #434343; }
+              .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post .wp-block-post-title a:hover {
+                text-decoration: none; }
+        .wp-site-blocks .wp-block-group .post-list .wp-block-post-template .wp-block-post-content .wp-block-image {
+          border: solid red 1px; }
+  .wp-site-blocks .single .wp-block-post-title {
+    text-align: center; }
+  .wp-site-blocks .single .wp-block-post-content {
+    line-height: 2; }
+  .wp-site-blocks .single .wp-block-post-date {
+    color: red; }
   .wp-site-blocks header.wp-block-template-part {
     background: #070c41;
     border-bottom: 3px white solid; }

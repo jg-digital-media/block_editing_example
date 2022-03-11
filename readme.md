@@ -233,7 +233,7 @@ The following code provided by the WordPress handbook demonstrates how to displa
 ```
 
 
- + `wp-block-query` - To add a Query Loop, use a group block query class with a div element. Inside this is where you put your Post List Tags.
++ `wp-block-query` - To add a Query Loop, use a group block query class with a div element. Inside this is where you put your Post List Tags.
 
 ```html
 

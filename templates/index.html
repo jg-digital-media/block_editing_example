@@ -1,19 +1,22 @@
 <!-- wp:template-part {"slug": "header", "tagName": "header", "layout": {"inherit": true}} /-->
  
 
+
 <div class="first-paragraph">
 
-    <!-- wp:paragraph { "className": "first-paragraph", "code-bg" } -->
+    <!-- wp:paragraph { "className": "first-paragraph" } -->
     <p>Welcome to the world of blocks. index.html</p>
     <!-- /wp:paragraph -->
 
 </div>
 
-<!-- wp:group {"layout":{"inherit":false}} -->
+<!-- wp:group {"layout":{"inherit":false}, "className" : "post-group"} -->
 <div class="wp-block-group">
 
     
 	<!-- wp:post-terms {"term":"category"} /-->
+
+    <!-- wp:categories /-->
 
     <!-- wp:query -->
     <div class="wp-block-query">
@@ -39,8 +42,8 @@
     </div>
     <!-- /wp:query -->     
     
-    <!-- wp:paragraph -->
-        <p>Blog List</p>
+    <!-- wp:paragraph { "className": "blog_list_title" } -->
+        <p class="blog_list_title">Blog List</p>
     <!-- /wp:paragraph -->
 
 

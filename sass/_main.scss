@@ -1,6 +1,5 @@
 
 
-
 /*******************
 
 BLOCK EDITING CONTAINING STYLES FOR CSS
@@ -15,7 +14,7 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
 
             .wp-block-post-pagination
 
-            .wp-block-post-template - Container element for a Query Tenplate
+            .wp-block-post-template - Container element for a Query Template
 
                 .wp-block-post - Containing Element for a Block Post
 
@@ -31,23 +30,59 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
 
     .first-paragraph {
         
+        text-align: center;    
+
+    }
+
+    /* second heading paragraph for second query loop */
+    .blog_list_title {
+
         text-align: center;
+        font-size: large;
+        border-bottom: 3px solid black;
 
     }
 
     
+    /* Styles for WP Group Block */
     .wp-block-group {
 
         content: "";
 
+        display: block;
+        margin: 0 auto;
+        width: 50%;
 
-        // Category list for archive pages
+
+        // Category List for archive pages - specific to post or a page
         .wp-block-post-terms {
 
             a {
                 
                 color: #07480f;
                 font-weight: bold;
+            }
+        }
+
+        /* Category List - all pages*/
+        .wp-block-categories-list, .wp-block-categories {
+
+            list-style: none;
+            padding: 0;
+
+            li.cat-item {
+                
+                display: inline-block;
+
+                a {
+
+                    color: red;
+
+                    &:hover {
+
+                        text-decoration: none;
+                    }
+                }
             }
         }
 
@@ -58,15 +93,9 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
             color: black;
 
             // wp-post-template
-            .wp-block-post-template {
-
+            .wp-block-post-template { 
             
-                .category-uncategorised {
-
-                    /* border-bottom: solid black 1px; */
-                }
-            
-                // wp-block-post    
+                // wp-block-post - containing element for a block post   
                 .wp-block-post {
 
                     background: #6fbbf1;
@@ -77,7 +106,10 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
                         background: #58c4b9;            
                     }            
 
+                    /* Block post title */
                     .wp-block-post-title {
+
+                        text-align: center;
 
                         a {
 
@@ -92,15 +124,137 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
 
                     }                
 
+                    /* Styling for a Query Loop Block */
                     .wp-block-post-content {
 
                         /* background: #3ab3fe; */
 
+
+                        // contents of a query loop block
                         .wp-block-image {
 
                             border: solid red 1px;
                         }
 
+
+                        /*Style  - Link,  inside a paragraph block, inside Query Loop Block */
+                        p {
+
+                            a {
+                                color: red;
+                            }
+
+                        }
+
+                        /* Styling - Query Pagination Block */
+                        .wp-block-query-pagination {
+
+                             /* Query Pagination Block numbers */ 
+                            .wp-block-query-pagination-numbers {
+
+                                a {
+
+                                    color: red;
+                                    font-weight: normal;
+                                }
+
+                                a.page-numbers {
+
+                                    color: red;
+
+                                    &:hover {
+
+                                        text-decoration: none;
+                                    }
+
+                                }
+                                
+
+                                span {
+
+                                     /* page number link colour */
+                                     &.current {
+
+                                        color: red;
+                                        font-weight: bold;
+                                     }
+
+                                     /* Sets the colour of the non clickable current page number - pagination block */
+                                     &.page-numbers {
+     
+                                         color: blue;
+                                     }     
+
+                                }
+
+                            }
+
+                            /* pagination links.... */
+                            .wp-block-query-pagination-next,
+                            .wp-block-query-pagination-previous {
+                             
+                                color: red;
+
+                                &:hover {
+
+                                    text-decoration: none;
+                                }
+
+                                a {
+
+                                    color: red;
+                                }
+
+                            } 
+
+                        }
+
+                    }
+
+                    /* archives-list classes */
+                    .wp-block-archives-list, .wp-block-archives {
+
+                        color: black;
+                        list-style: none;
+                        padding: 0;
+    
+                        li {
+
+                            height: 20px;
+
+                            a {
+
+                                color: green;
+                                margin: 10px 0;
+                            }
+
+                        }
+                    }
+
+                    /* wp-block-post-author inside query loop*/
+
+                    .wp-block-post-author {
+
+                        .wp-block-post-author__content {
+
+                            color: blue;
+
+                        }
+
+                        .wp-block-post-author__name {
+
+                            color: blue;
+
+                        }
+                    }
+
+                    /* wp-block-post-author inside query loop*/
+                    .wp-block-post-date {
+
+                        time {
+
+                            color: red;
+                        }
                     }
 
                 }
@@ -110,13 +264,18 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
         }  
 
 
+        // wp-block-archives-list wp-block-archives
+
+
         // wp-block-post-title
 
-        // wp-block-query post-list
+        // second wp-block-query post-list
         .post-list {
 
             background: none;
             margin: 0;
+
+            
 
             // wp-post-template
             .wp-block-post-template {
@@ -151,12 +310,14 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
 
                 }
 
+                /* post list query block - query loop*/
                 .wp-block-post-content {
 
                     .wp-block-image {
 
                         border: solid red 1px;
                     }
+
                 }
     
             } 
@@ -165,7 +326,30 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
 
     }
 
+    .single {
 
+        .wp-block-post-title {
+
+            text-align: center;
+
+        }
+
+        .wp-block-post-content {
+
+            line-height: 2;
+        }
+
+        .wp-block-post-date {
+
+            color: red;
+
+        }
+
+        .wp-block-post-terms {
+
+            
+        }
+    }
 
 
     /* header template part */
@@ -194,16 +378,18 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
                 color: white;
 
                 &:hover {
+
                     text-decoration: none;
                 }
+
             }
+
         }
 
         h2 {
             
             text-align: center;
             color: white;
-
         }
 
         p {
@@ -237,8 +423,10 @@ BLOCK EDITING CONTAINING STYLES FOR CSS
     footer.wp-block-template-part {
 
         p {
+
             text-align: center;
         }
+        
     }
 
 }

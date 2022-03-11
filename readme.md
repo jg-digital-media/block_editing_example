@@ -1,5 +1,5 @@
 # Basic Block Theme Developing for WordPress (5.9+)  
-**Updated:**  18/02/2022 - 14:30 v7
+**Updated:**  21/02/2022 - 14:39 v8
 
 
 ## Source Links
@@ -284,6 +284,13 @@ The following code provided by the WordPress handbook demonstrates how to displa
 </div>
 ```
 
+```html
+CATEGORY BLOCK EXAMPLE  - list of every available category on the webite
+
+<!-- wp:categories /-->
+
+```
+
 Using Bock Editing Tags in your theme will add a number of classes to the html of your project.
 
 Examples of these classes include:
@@ -549,4 +556,6 @@ For single post template there is a Template hierarchy that comes into play.  If
     + Look for the "Advanced" panel and select the HTML `element` to target from the drop down menu. The header and footer elements should now be tied to the appropriate class.
  
  + I've added a class name for the paragraph block that is a descendent of the wp-site-block. That's been disabled by WordPress. Why, I'm not sure but it's staying in for now and has a container div as a fallback in the meantime. 
+
+
 
